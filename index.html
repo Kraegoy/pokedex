@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="overlay" onclick="closeOverlay()"></div>
+    <div class="nav">
+        <a href="index.html"><img src="icons8-pokeball-100.png" class="logo" alt=""></a>
+
+        <div class="filter-container">
+            <label class="filter-option">
+                <input type="radio" name="filter" value="id" onclick="loadMore()" checked>
+                Filter by Id
+            </label>
+            <label class="filter-option">
+                <input type="radio" name="filter" value="name" onclick="loadMore()">
+                Filter by Name
+            </label>
+        </div>
+
+        <form class="search" onsubmit="searchPokemon(); return false; ">
+            <input type="text" id="search" placeholder="Enter Pokémon name or ID">
+        </form>
+
+    </div>
+    <div class="container">
+      
+
+        <div id="pokedex"></div>
+        <div id="pokemon-details">
+        </div>
+        <div class="load-more" onclick="loadMore()"><span>load more</span></div>
+        
+    </div>
+
+    <script src="pokedex.js"></script>
+</body>
+</html>
