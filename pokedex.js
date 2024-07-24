@@ -38,7 +38,7 @@ const fetchPokemon = async (id) => {
 const createPokemonCard = (pokemon) => {
     const pokemonCard = document.createElement('div');
     pokemonCard.className = 'pokemon-card';
-    pokemoniD = String(pokemon.id).padStart(3, '0');
+    const pokemoniD = String(pokemon.id).padStart(3, '0');
 
     const pokemonImage = document.createElement('img');
     pokemonImage.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemoniD}.png`;
