@@ -75,7 +75,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
-    max-width: 300px; /* Adjust the width as needed */
+    max-width: 300px; 
     margin-bottom: 10px;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -105,6 +105,7 @@ body {
     margin: 5px;
     font-size: 16px;
     cursor: pointer; 
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
@@ -114,7 +115,7 @@ body {
 }
 
 #next-button {
-    margin-left: auto; /* Align to the right */
+    margin-left: auto; 
 }
 .pokemon-details {
     width: 400px;
@@ -133,6 +134,13 @@ body {
 .pokemon-details h2 {
     margin-top: 0;
  
+}
+
+.pokemon-details img{
+    position: absolute;
+    width: 7em;
+    right: 1em;
+    top: 1em;
 }
 
 .pokemon-details ul {
@@ -162,7 +170,7 @@ body {
 .filter-container {
     position: absolute;
     display: flex;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
     font-size: 0.9em;
     left: 7em;
 }
@@ -203,11 +211,37 @@ body {
         width: 150px;
     }
   }
-  @media screen and (max-width: 950px) {
+
+@media screen and (max-width: 950px) {
     .search input{
         margin-top: 2em;
      
   }
+}
+
+@media screen and (max-width: 660px) {
+    .pokemon-details{
+        font-size: 0.95em;
+        width: 350px;
+        height: 380px;
+    }
+    #previous-button{
+        margin-right: 360px;
+        margin-left: -2em;
+    }
+    #previous-button, #next-button{
+        padding: 5px 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pokemon-details{
+        width: 310px;
+        height: 370px;
+    }
+    #previous-button{
+        margin-right: 320px;
+    }
 }
 
   @media screen and (max-width: 450px) {
@@ -220,11 +254,40 @@ body {
     .search input{
         font-size: 0.8em;
     }
+    .pokemon-details{
+        width: 280px;
+        height: 340px;
+        font-size: 0.8em;
+    }
+    #previous-button{
+        margin-right: 280px;
+    }
 
   }
   @media screen and (max-width: 405px) {
     .pokemon-card {
         width: 200px;
+    }
+
+    .pokemon-details{
+        width: 250px;
+        height: 320px;
+    }
+    #previous-button{
+        margin-right: 250px;
+    }
+    
+
+  }
+
+  @media screen and (max-width: 350px) {
+    .pokemon-details{
+        width: 220px;
+        height: 340px;
+    }
+
+    #previous-button{
+        margin-right: 220px;
     }
   }
 
@@ -254,3 +317,4 @@ body {
         height: 220px;
     }
   }
+  

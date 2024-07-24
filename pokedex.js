@@ -241,6 +241,10 @@ const displayPokemonDetails = (pokemon) => {
     const pokemonWeight = document.createElement('p');
     pokemonWeight.textContent = `Weight: ${pokemon.weight}`;
 
+    const pokemonImageDetails = document.createElement('img');
+    pokemonImageDetails.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${String(pokemon.id).padStart(3, '0')}.png`;
+    pokemonImageDetails.alt = pokemon.name;
+
       // Create and append navigation buttons
       const slides = document.createElement('div');
       slides.className = 'slides';
@@ -258,7 +262,9 @@ const displayPokemonDetails = (pokemon) => {
       slides.appendChild(previousButton);
       slides.appendChild(nextButton);
 
+      
     pokemonDetails.appendChild(pokemonName);
+    pokemonDetails.appendChild(pokemonImageDetails);
     pokemonDetails.appendChild(pokemonId);
     pokemonDetails.appendChild(pokemonType);
     pokemonDetails.appendChild(weaknessesElement); // Append weaknesses
