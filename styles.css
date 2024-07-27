@@ -50,15 +50,17 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 1em;
     font-weight: bolder;
     cursor: pointer;
+    padding: 1em;
 }
 
 .load-more span{
-    background-color: rgb(181, 255, 255);
+    background-color: white;
+    border: 1px solid #ddd;
     padding: 10px;
     border-radius: 10px;
+    font-weight: lighter;
 
 }
 
@@ -173,6 +175,7 @@ body {
     width: 300px;
     font-size: 0.9em;
     left: 7em;
+    z-index: 1000;
 }
 
 .filter-option {
